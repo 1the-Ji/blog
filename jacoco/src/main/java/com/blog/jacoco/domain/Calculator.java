@@ -2,8 +2,10 @@ package com.blog.jacoco.domain;
 
 public class Calculator {
 
+
     public long add(long a, long b){
         return a+b;
+
     }
 
     public long subtract(long a, long b){

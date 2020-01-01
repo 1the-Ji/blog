@@ -43,4 +43,12 @@ class CalculatorTest {
         assertThatThrownBy(() -> calculator.divide(100, 0)).isInstanceOf(IllegalArgumentException.class);
 
     }
+
+    @Test
+    void makeStaticCalculator() {
+        Calculator calculator = new Calculator().makeStaticCalculator();
+        Calculator calculator1 = new Calculator().makeStaticCalculator();
+
+        assertThat(calculator.hashCode()).isEqualTo(calculator1.hashCode());
+    }
 }
